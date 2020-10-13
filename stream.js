@@ -10,6 +10,8 @@ let player = new Twitch.Player("stream", options)
 document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
 
-    let streamer = document.getElementById("streamSelector").value
+    let streamer = document.getElementById("streamerInput").value || document.getElementById("streamSelector").value
+
+    console.log(streamer)
     player.setChannel(streamer)
 })
