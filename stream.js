@@ -1,6 +1,13 @@
+
+let height = 720
+if ((window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
+{
+  height = 360
+  console.log("Is on mobile")
+}
 var options = {
-    width: 1280,
-    height: 720,
+    width: "100%",
+    height: height,
     channel: "zerator",
     // only needed if your site is also embedded on embed.example.com and othersite.example.com 
     parent: ["zevent.camille-bessancourt.fr"]

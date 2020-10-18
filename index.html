@@ -10,37 +10,20 @@
 </head>
 
 <body class="bg-dark">
-    <div class="row">
-        <div class="offset-md-1 container-md-10 text-center">
-            <div id="stream" class="mt-2 ml-2"></div>
+    <div class="row h-100">
+        <div class="offset-1 col-7 text-center">
+            <div id="stream" class="mt-2"></div>
         </div>
-        <div class="container-md-1 mt-2 ml-2">
-            <select class="custom-select" id="streamSelector">
-                <option selected>Select a Streamer</option>
-                <option value="zerator">ZeratoR</option>
-                <option value="mistermv">Mister MV</option>
-                <option value="antoinedaniellive">Antoine Daniel</option>
-                <option value="drfeelgood">DFG</option>
-                <option value="domingo">Domingo</option>
-                <option value="etoiles">Etoiles</option>
-                <option value="gotaga">Gotaga</option>
-                <option value="joueur_du_grenier">JDG</option>
-                <option value="kamet0">Kameto</option>
-                <option value="sardoche">Sardoche</option>
-                <option value="solary">Solary</option>
-                <option value="squeezie">Squeezie</option>
-                <option value="xari">Xari</option>
-                <option disabled>- Wise -</option>
-                <option value="gom4rt">Gom4rt</option>
-                <option value="gius">Gius</option>
-                <option value="littlebigwhale">LittleBigWhale</option>
-            </select>
-
-            <label for="streamerInput">Type a channel</label>
-            <input class="" type="text" name="streamerInput" id="streamerInput">
-
-            <button type="button" id="update" class="btn btn-success btn-block">Update Channel</button>
+        <div class="col-3 mt-2">
+            <form method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="streamerInput" id="streamerInput" placeholder="Type a channel">
+                    <button type="button" id="update" class="btn btn-success btn-block">Update Channel</button>
+                </div>
+            </form>
         </div>
+
+    </div>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
