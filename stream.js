@@ -1,15 +1,14 @@
 
+let favoriteStreamers = window.localStorage.getItem("fs") || [];
+
 let height = 720
 if ((window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
-{
   height = 360
-  console.log("Is on mobile")
-}
+
 var options = {
     width: "100%",
     height: height,
-    channel: "zerator",
-    // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+    channel: favoriteStreamers[0] || "gotaga",
     parent: ["zevent.camille-bessancourt.fr"]
   };
 let player = new Twitch.Player("stream", options)
@@ -17,8 +16,32 @@ let player = new Twitch.Player("stream", options)
 document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
 
-    let streamer = document.getElementById("streamerInput").value || document.getElementById("streamSelector").value
+    let streamer = document.getElementById("streamerInput").value
+    
+    if (favoriteStreamers.indexOf(streamer) === -1)
+    {
+      favoriteStreamers.unshift(streamer);
+      window.localStorage.setItem("fs", favoriteStreamers);
+      generateList(streamer);
+    }
 
-    console.log(streamer)
     player.setChannel(streamer)
 })
+
+let generateList = (streamer) => {
+
+  let len = 10;
+
+  if (favoriteStreamers.length < 10)
+      len = favoriteStreamers.length;
+
+  let list = document.getElementById("listFavStreamers");
+
+  let a = document.createElement("a");
+  a.innerText = streamer;
+  a.classList = "list-group-item list-group-item-action text-capitalize";
+  a.id = streamer;
+  a.onclick = player.setChannel(streamer);
+
+  list.insertBefore(a, list.firstChild)
+}
