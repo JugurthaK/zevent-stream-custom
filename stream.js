@@ -1,4 +1,3 @@
-
 let favoriteStreamers = window.localStorage.getItem("fs") || [];
 
 let height = 720
@@ -17,7 +16,6 @@ document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
 
     let streamer = document.getElementById("streamerInput").value
-    
     if (favoriteStreamers.indexOf(streamer) === -1)
     {
       favoriteStreamers.unshift(streamer);
@@ -27,6 +25,8 @@ document.getElementById("update").addEventListener('click', (e) => {
 
     player.setChannel(streamer)
 })
+
+
 
 let generateList = (streamer) => {
 
@@ -44,4 +44,6 @@ let generateList = (streamer) => {
   a.onclick = player.setChannel(streamer);
 
   list.insertBefore(a, list.firstChild)
+
+  a.addEventListener("click", e => player.setChannel(streamer));
 }

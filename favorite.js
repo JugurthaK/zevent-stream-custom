@@ -17,9 +17,10 @@ if (favoriteStreamers[0] !== undefined) {
         a.innerText = favoriteStreamers[i];
         a.classList = "list-group-item list-group-item-action text-capitalize";
         a.id = favoriteStreamers[i];
-        a.onclick = player.setChannel(favoriteStreamers[i]);
-
+        a.href = "#"
         list.appendChild(a);
+
+        a.addEventListener("click", e => player.setChannel(favoriteStreamers[i]));
     }
 }
 
