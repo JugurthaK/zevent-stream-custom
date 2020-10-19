@@ -30,17 +30,13 @@ document.getElementById("update").addEventListener('click', (e) => {
 
 let generateList = (streamer) => {
 
-  let len = 10;
-
-  if (favoriteStreamers.length < 10)
-      len = favoriteStreamers.length;
-
   let list = document.getElementById("listFavStreamers");
 
   let a = document.createElement("a");
   a.innerText = streamer;
   a.classList = "list-group-item list-group-item-action text-capitalize";
   a.id = streamer;
+  a.href = "#";
   a.onclick = player.setChannel(streamer);
 
   list.insertBefore(a, list.firstChild)
