@@ -26,15 +26,13 @@ document.getElementById("update").addEventListener('click', (e) => {
     player.setChannel(streamer)
 })
 
-
-
 let generateList = (streamer) => {
 
   let list = document.getElementById("listFavStreamers");
 
   let a = document.createElement("a");
   a.innerText = streamer;
-  a.classList = "list-group-item list-group-item-action text-capitalize";
+  a.classList = "list-group-item list-group-item-action text-capitalize bg-transparent text-white";
   a.id = streamer;
   a.href = "#";
   a.onclick = player.setChannel(streamer);
@@ -43,3 +41,12 @@ let generateList = (streamer) => {
 
   a.addEventListener("click", e => player.setChannel(a.id));
 }
+
+document.getElementById("buttonClear").addEventListener("click", e => {
+  e.preventDefault();
+
+  let list = document.getElementById("listFavStreamers");
+  list.childNodes.forEach(el => el.remove());
+
+  window.localStorage.removeItem("fs");
+})

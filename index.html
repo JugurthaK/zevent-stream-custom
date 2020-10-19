@@ -5,24 +5,27 @@
     <link rel="shortcut icon" href="https://zevent.fr/assets/images/zevent.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Zevent</title>
 </head>
 
-<body class="bg-dark">
+<body class="bg-secondary">
     <div class="row h-100">
         <div class="offset-1 col-7 text-center">
-            <div id="stream" class="mt-2"></div>
+            <div id="stream" class="mt-2 rounded-lg"></div>
         </div>
         <div class="col-3 mt-2">
             <form method="POST">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="streamerInput" id="streamerInput" placeholder="Type a channel">
-                    <button type="button" id="update" class="btn btn-success btn-block">Update Channel</button>
+                    <input class="form-control mb-1" type="text" name="streamerInput" id="streamerInput" placeholder="Type a channel" autocomplete="off">
+                    <button type="button" id="update" class="btn btn-primary btn-block">Update Channel</button>
                 </div>
             </form>
 
-            <div class="list-group" id="listFavStreamers"></div>
+            <div class="list-group list-group-flush" id="listFavStreamers"></div>
+
+            <hr>
+            <button type="button" class="btn btn-outline-light btn-sm" id="buttonClear">Clear List</button>
         </div>
 
     </div>
