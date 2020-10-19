@@ -41,5 +41,5 @@ let generateList = (streamer) => {
 
   list.insertBefore(a, list.firstChild)
 
-  a.addEventListener("click", e => player.setChannel(streamer));
+  a.addEventListener("click", e => player.setChannel(a.id));
 }

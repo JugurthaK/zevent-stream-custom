@@ -20,7 +20,7 @@ if (favoriteStreamers[0] !== undefined) {
         a.href = "#"
         list.appendChild(a);
 
-        a.addEventListener("click", e => player.setChannel(favoriteStreamers[i]));
+        a.addEventListener("click", e => player.setChannel(a.id));
     }
 }
 
