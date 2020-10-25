@@ -10,11 +10,19 @@
 </head>
 
 <body class="bg-secondary">
-    <div class="row h-100">
-        <div class="offset-1 col-7 text-center">
-            <div id="stream" class="mt-2 rounded-lg"></div>
+    <div class="row h-100 mt-4 ">
+        <div class="col-6 ml-4 text-center">
+            <div id="stream" class="rounded-lg"></div>
         </div>
-        <div class="col-3 mt-2">
+        <div class="col-md-2">
+            <iframe id="chatEmbed"
+                    scrolling="yes"
+                    height="720"
+                    width="100%">
+            </iframe>
+        </div>
+
+        <div class="col-2">
             <form method="POST">
                 <div class="form-group">
                     <input class="form-control mb-1" type="text" name="streamerInput" id="streamerInput" placeholder="Type a channel" autocomplete="off">

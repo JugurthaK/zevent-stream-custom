@@ -20,10 +20,11 @@ document.getElementById("update").addEventListener('click', (e) => {
     {
       favoriteStreamers.unshift(streamer);
       window.localStorage.setItem("fs", favoriteStreamers);
-      generateList(streamer);
+      generateList(streamer)
     }
 
     player.setChannel(streamer)
+    updateChat(streamer)
 })
 
 let generateList = (streamer) => {
@@ -50,3 +51,8 @@ document.getElementById("buttonClear").addEventListener("click", e => {
 
   window.localStorage.removeItem("fs");
 })
+
+let updateChat = (streamer) => {
+  let iframe = document.getElementById("chatEmbed");
+  iframe.src = `https://www.twitch.tv/embed/${streamer}/chat?parent=${options.parent}`
+}
