@@ -31,9 +31,7 @@ document.getElementById("update").addEventListener('click', (e) => {
 })
 
 let generateList = (streamer) => {
-
   let list = document.getElementById("listFavStreamers");
-
   let a = document.createElement("a");
   a.innerText = streamer;
   a.classList = "list-group-item list-group-item-action text-capitalize bg-transparent text-white";
