@@ -8,9 +8,12 @@ var options = {
     width: "100%",
     height: height,
     channel: favoriteStreamers[0] || "gotaga",
-    parent: ["zevent.camille-bessancourt.fr"]
+    parent: ["zevent.camille-bessancourt.fr"],
+    layout: "video-with-chat",
+    theme: "dark",
+
   };
-let player = new Twitch.Player("stream", options)
+let player = new Twitch.Embed("stream", options)
 
 document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
@@ -23,8 +26,8 @@ document.getElementById("update").addEventListener('click', (e) => {
       generateList(streamer)
     }
 
-    player.setChannel(streamer)
     updateChat(streamer)
+    player.setChannel(streamer)
 })
 
 let generateList = (streamer) => {
@@ -51,9 +54,3 @@ document.getElementById("buttonClear").addEventListener("click", e => {
 
   window.localStorage.removeItem("fs");
 })
-
-let updateChat = (streamer) => {
-  let iframe = document.getElementById("chatEmbed");
-  iframe.src = `https://www.twitch.tv/embed/${streamer}/chat?parent=${options.parent}`
-  console.log(iframe)
-}
