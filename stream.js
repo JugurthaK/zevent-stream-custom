@@ -55,4 +55,5 @@ document.getElementById("buttonClear").addEventListener("click", e => {
 let updateChat = (streamer) => {
   let iframe = document.getElementById("chatEmbed");
   iframe.src = `https://www.twitch.tv/embed/${streamer}/chat?parent=${options.parent}`
+  console.log(iframe)
 }
