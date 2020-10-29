@@ -7,7 +7,7 @@ if ((window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
 var options = {
     width: "100%",
     height: height,
-    channel: favoriteStreamers[0] || "gotaga",
+    channel: favoriteStreamers.split(",")[0] || "gotaga",
     parent: ["zevent.camille-bessancourt.fr"],
     layout: "video-with-chat",
     theme: "dark",
@@ -26,7 +26,6 @@ document.getElementById("update").addEventListener('click', (e) => {
       generateList(streamer)
     }
 
-    updateChat(streamer)
     player.setChannel(streamer)
 })
 
