@@ -3,10 +3,8 @@ let len = 0;
 
 if (favoriteStreamers[0] !== undefined) {
     favoriteStreamers = favoriteStreamers.split(",")
-    if (favoriteStreamers.length > 10) {
-        favoriteStreamers.slice(0, 10);
+    if (favoriteStreamers.length > 10)
         len = 10
-    }
     else
         len = favoriteStreamers.length
 
