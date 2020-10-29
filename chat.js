@@ -5,4 +5,12 @@ let updateChat = () => {
     player = new Twitch.Embed("stream", options);
 }
 
-document.getElementById("chat").addEventListener("click", (e) => updateChat())
+let hideChatBtn = document.getElementById("chat")
+
+hideChatBtn.addEventListener("click", (e) => {
+    updateChat()
+    hideChatBtn.textContent.indexOf("hide") > - 1 ? 
+        hideChatBtn.textContent = "Display Chat" :
+        hideChatBtn.textContent = "Hide Chat"
+
+})
