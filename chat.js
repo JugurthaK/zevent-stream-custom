@@ -9,7 +9,7 @@ let hideChatBtn = document.getElementById("chat")
 
 hideChatBtn.addEventListener("click", (e) => {
     updateChat()
-    hideChatBtn.textContent.indexOf("hide") > - 1 ? 
+    hideChatBtn.textContent.indexOf("Hide") > - 1 ? 
         hideChatBtn.textContent = "Display Chat" :
         hideChatBtn.textContent = "Hide Chat"
 
