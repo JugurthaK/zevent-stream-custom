@@ -26,6 +26,7 @@ document.getElementById("update").addEventListener('click', (e) => {
       generateList(streamer)
     }
 
+    options.channel = streamer
     player.setChannel(streamer)
 })
 
