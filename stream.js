@@ -9,11 +9,10 @@ var options = {
     height: height,
     channel: favoriteStreamers.split(",")[0] || "gotaga",
     parent: ["zevent.camille-bessancourt.fr"],
-    layout: "video-with-chat",
     theme: "dark",
 
   };
-let player = new Twitch.Embed("stream", options)
+let player = new Twitch.Player("stream", options)
 
 document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
