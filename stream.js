@@ -7,7 +7,7 @@ if ((window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
 var options = {
     width: "100%",
     height: height,
-    channel: favoriteStreamers.split(",")[0] || "gotaga",
+    channel: favoriteStreamers ? favoriteStreamers.split(",")[0] : "gotaga",
     parent: ["zevent.camille-bessancourt.fr"],
     theme: "dark",
 

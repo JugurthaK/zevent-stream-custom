@@ -12,7 +12,7 @@ if (favoriteStreamers[0] !== undefined) {
 
     for (let i = 0; i < len; ++i) {
         let a = document.createElement("a");
-        a.innerText = favoriteStreamers[i];
+        a.innerText = favoriteStreamers[i] + " ";
         //a.classList = "list-group-item list-group-item-action text-capitalize bg-transparent text-white";
         a.id = favoriteStreamers[i];
         a.href = "#"
