@@ -5,14 +5,18 @@
     <link rel="shortcut icon" href="https://zevent.fr/assets/images/zevent.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
     <title>Zevent</title>
 </head>
 
-<body class="bg-secondary">
+<body>
     <div class="row h-100 mt-4 ml-4">
         <div class="col-9 text-center">
-            <div id="stream" class="rounded-lg"></div>
+            <div id="stream_chat">
+                <div id="stream" class="rounded-lg"></div>
+                <div id="chatEmbed"></div>
+            </div>
         </div>
         <div class="col-2">
             <form method="POST">
