@@ -18,6 +18,8 @@ document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
 
     let streamer = document.getElementById("streamerInput").value
+    if (streamer.indexOf("twitch.tv") > -1)
+      streamer = streamer.split("/")[1];
     if (favoriteStreamers.indexOf(streamer) === -1)
     {
       favoriteStreamers.unshift(streamer);

@@ -11,27 +11,29 @@
 
     <style>
         @import url("https://unpkg.com/chota@latest");
-        :root{
+
+        :root {
             --color-primary: #9147ff;
         }
+
         body.dark {
-          --bg-color: #000;
-          --bg-secondary-color: #131316;
-          --font-color: #f5f5f5;
-          --color-grey: #ccc;
-          --color-darkGrey: #777;
+            --bg-color: #000;
+            --bg-secondary-color: #131316;
+            --font-color: #f5f5f5;
+            --color-grey: #ccc;
+            --color-darkGrey: #777;
         }
-      </style>
+    </style>
 </head>
 
 <body class="dark">
-<!--     <nav class="nav">
+    <nav class="nav">
         <div class="nav-center">
-          <a class="brand">
-            <img src="https://jenil.github.io/chota/logo.svg" alt="">
-          </a>
+            <a class="brand" href="https://github.com/JugurthaK" target="_blank">
+                <img src="https://icongr.am/simple/audiomack.svg?size=128&color=9147ff&colored=false" alt="">
+            </a>
         </div>
-      </nav> -->
+    </nav>
     <div class="row h-100 mt-4 ml-4">
         <div class="col-9 text-center">
             <div id="stream_chat">
@@ -44,9 +46,10 @@
                 <fieldset id="forms_input">
                     <legend>Stream finder</legend>
                     <p class="grouped">
-                        <input type="search" name="streamerInput" id="streamerInput" placeholder="Streamer" autocomplete="off">
-                        <button class="button icon-only" id="update">
-                            <h3>🔍</h3>
+                        <input type="search" name="streamerInput" id="streamerInput" placeholder="streamer"
+                            autocomplete="off">
+                        <button class="button primary icon-only" id="update">
+                            <img src="https://icongr.am/simple/twitch.svg?color=ffffff&colored=false" alt="">
                         </button>
                     </p>
                 </fieldset>
@@ -56,13 +59,21 @@
                 <legend>History</legend>
                 <div class="list-group list-group-flush" id="listFavStreamers"></div>
                 <p>
-                    <button type="button" class="button outline secondary" id="buttonClear">Clear List</button>
+                    <button type="button" class="button outline primary" id="buttonClear">Clear List</button>
                 </p>
             </fieldset>
         </div>
+    </div>
 
-    </div>
-    </div>
+    <footer>
+        <nav class="nav">
+            <div class="nav-center">
+                <a href="https://github.com/JugurthaK" target="_blank">
+                    &copy; jk
+                </a>
+            </div>
+        </nav>
+    </footer>
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script src="./stream.js"></script>
     <script src="./favorite.js"></script>
