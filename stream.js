@@ -35,6 +35,7 @@ let generateList = (streamer) => {
   a.innerText = streamer + " ";
   a.id = streamer;
   a.href = "#";
+  a.classList = "text-primary"
   a.onclick = player.setChannel(streamer);
 
   list.insertBefore(a, list.firstChild)
