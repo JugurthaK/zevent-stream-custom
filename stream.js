@@ -7,7 +7,7 @@ if ((window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
 var options = {
     width: "100%",
     height: height,
-    channel: favoriteStreamers ? favoriteStreamers.split(",")[0] : "gotaga",
+    channel: window.localStorage.getItem("fs") ? favoriteStreamers.split(",")[0] : "gotaga",
     parent: ["zevent.camille-bessancourt.fr"],
     theme: "dark",
 
@@ -33,7 +33,7 @@ let generateList = (streamer) => {
   let list = document.getElementById("listFavStreamers");
   let a = document.createElement("a");
   a.innerText = streamer;
-  a.classList = "list-group-item list-group-item-action text-capitalize bg-transparent text-white";
+  //a.classList = "list-group-item list-group-item-action text-capitalize bg-transparent text-white";
   a.id = streamer;
   a.href = "#";
   a.onclick = player.setChannel(streamer);
