@@ -20,19 +20,24 @@
         </div>
         <div class="col-2">
             <form method="POST">
-                <div class="form-group">
-                    <input class="form-control mb-1" type="text" name="streamerInput" id="streamerInput" placeholder="Type a channel" autocomplete="off">
-                    <div class="btn-group btn-block">
-                        <button type="button" id="update" class="btn btn-primary ">Update</button>
-                        <!-- <button type="button" id="chat" class="btn btn-primary">Hide Chat</button> -->
-                    </div>
-                </div>
+                <fieldset id="forms_input">
+                    <legend>Stream finder</legend>
+                    <p class="grouped">
+                        <input type="search" name="streamerInput" id="streamerInput" placeholder="Streamer" autocomplete="off">
+                        <button class="button icon-only" id="update">
+                            <img src="https://icongr.am/feather/search.svg?size=32" alt="">
+                        </button>
+                    </p>
+                </fieldset>
             </form>
 
-            <div class="list-group list-group-flush" id="listFavStreamers"></div>
-
-            <hr>
-            <button type="button" class="btn btn-outline-light btn-sm" id="buttonClear">Clear List</button>
+            <fieldset>
+                <legend>History</legend>
+                <div class="list-group list-group-flush" id="listFavStreamers"></div>
+                <p>
+                    <button type="button" class="button outline secondary" id="buttonClear">Clear List</button>
+                </p>
+            </fieldset>
         </div>
 
     </div>
@@ -48,7 +53,7 @@
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script src="./stream.js"></script>
     <script src="./favorite.js"></script>
-    <!-- <script src="./chat.js"></script> -->
+    <script src="./darkmode.js"></script>
 </body>
 
 </html>
