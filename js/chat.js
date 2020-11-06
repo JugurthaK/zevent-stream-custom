@@ -6,7 +6,6 @@ let initChat = (streamer) => {
     iframe.setAttribute('src', `https://www.twitch.tv/embed/${streamer}/chat?parent=zevent.camille-bessancourt.fr&theme=dark`)
     iframe.setAttribute('height', '720')
     iframe.setAttribute('width', '100%')
-    iframe.setAttribute('theme')
 
     chat.appendChild(iframe)
 }
