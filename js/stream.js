@@ -1,12 +1,9 @@
 let favoriteStreamers = window.localStorage.getItem("fs") || [];
 
-let height = 720
-if ((window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
-  height = 360
 
 var options = {
     width: "100%",
-    height: height,
+    height: 720,
     channel: window.localStorage.getItem("fs") ? favoriteStreamers.split(",")[0] : "gotaga",
     parent: ["zevent.camille-bessancourt.fr"],
     theme: "dark",
