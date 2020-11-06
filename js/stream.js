@@ -26,7 +26,7 @@ document.getElementById("update").addEventListener('click', (e) => {
     }
 
     options.channel = streamer
-    initChat(streamer)
+    updateChat(streamer)
     player.setChannel(streamer)
 })
 

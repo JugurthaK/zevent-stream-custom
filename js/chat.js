@@ -9,3 +9,9 @@ let initChat = (streamer) => {
 
     chat.appendChild(iframe)
 }
+
+let updateChat = (streamer) => {
+    let iframe = document.getElementById("chatIframe")
+
+    iframe.setAttribute('src',`https://www.twitch.tv/embed/${streamer}/chat?parent=zevent.camille-bessancourt.fr`)
+}
