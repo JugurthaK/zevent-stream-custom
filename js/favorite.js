@@ -18,7 +18,10 @@ if (favoriteStreamers[0] !== undefined) {
         a.href = "#"
         list.appendChild(a);
 
-        a.addEventListener("click", e => player.setChannel(a.id));
+        a.addEventListener("click", e => {
+            player.setChannel(a.id)
+            updateChat(a.id)
+        });
     }
 }
 
