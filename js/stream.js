@@ -10,6 +10,7 @@ var options = {
 
   };
 let player = new Twitch.Player("stream", options)
+initChat(window.localStorage.getItem("fs") ? favoriteStreamers.split(",")[0] : "gotaga")
 
 document.getElementById("update").addEventListener('click', (e) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ document.getElementById("update").addEventListener('click', (e) => {
     }
 
     options.channel = streamer
+    initChat(streamer)
     player.setChannel(streamer)
 })
 
