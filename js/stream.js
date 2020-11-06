@@ -37,7 +37,7 @@ let generateList = (streamer) => {
   a.id = streamer;
   a.href = "#";
   a.classList = "text-primary"
-  a.onclick = player.setChannel(streamer);
+  a.onclick = player.setChannel(streamer);updateChat(streamer);
 
   list.insertBefore(a, list.firstChild)
 
