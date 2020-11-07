@@ -24,4 +24,3 @@ if (favoriteStreamers[0] !== undefined) {
         });
     }
 }
-
