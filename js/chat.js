@@ -24,7 +24,7 @@ let hideChat = () => {
         hidden = true
 
     hidden ? chat.style.display = 'block' : chat.style.display = 'none'
-    hidden ? stream.classList.replace("col-10", "col-8") : stream.classList.replace("col-8", "col-10")
+    hidden ? stream.parentElement.classList.replace("col-10", "col-8") : stream.parentElement.classList.replace("col-8", "col-10")
 }
 
 document.getElementById("buttonChat").addEventListener("click", e => {
