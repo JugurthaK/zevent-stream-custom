@@ -19,12 +19,16 @@ let hideChat = () => {
     let chat = document.getElementById("chat");
     let stream = document.getElementById("stream");
 
-    let hidden = false
     if (chat.style.display === 'none')
-        hidden = true
-
-    hidden ? chat.style.display = 'block' : chat.style.display = 'none'
-    hidden ? stream.parentElement.classList.replace("col-10", "col-8") : stream.parentElement.classList.replace("col-8", "col-10")
+    {
+        chat.style.display = 'block'
+        chat.parentElement.classList = "col-2"
+        stream.parentElement.classList.replace("col-10", "col-8")
+    } else {
+        chat.style.display = 'none'
+        chat.parentElement.classList = ""
+        stream.parentElement.classList.replace("col-8", "col-10")
+    }
 }
 
 document.getElementById("buttonChat").addEventListener("click", e => {
